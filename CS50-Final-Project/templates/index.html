@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+        
+            <h3 class="text-center">Welcome to</h3>
+            <h1 class="text-center main-title" style="font-family: 'Bangers', cursive;"link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">CS50 FIT Story</h1>
+            <h5>Your current cash is $ {{ current_cash }}</h5>
+            <br>
+
+        <thead class="thead-light">
+        <tr>
+            <th style="font-size:30px">Day</th>
+            <th style="font-size:30px">Time</th>
+            <th style="font-size:30px">Class</th>
+        </tr>
+        </thead>
+        <tbody>
+           {% for class in classes %}
+                <tr>
+                    <td>{{ class.Day }}</td>
+                    <td>{{ class.Time }}</td>
+                    <td>{{ class.class_type }}</td>
+                    <td>
+                        <form action="/deregister" method="post">
+                            <input name="class_id" type="hidden" value="{{ class.id }}">
+                            <input type="submit" value="Deregister" class="deregister">
+                            <input name="class_type" type="hidden" value="{{ class.class_type }}">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tr>
+
+        </tr>
+    </table>
+{% endblock %}

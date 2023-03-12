@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign up for a new class
+{% endblock %}
+
+{% block main %}
+<form action="sign_up" method="post">
+    <h1>Class</h1>
+    <div style="width:200px; margin: 0 auto; text-align: center">
+    <select style="width:200;"class="form-select" aria-label="Default select example" name="class_type">
+        <option disabled selected>Choose a class</option>
+        {% for class_type in class_types %}
+        <option value="{{ class_type }}">{{ class_type }}</option>
+        {% endfor %}
+    </select>
+    </div>
+    <br>
+    <h1>Day</h1>
+    <div style="width:200px; margin: 0 auto; text-align: center">
+    <select class="form-select" aria-label="Default select example" name="day">
+        <option selected disabled>Choose a day</option>
+        {% for day in days %}
+        <option value="{{ day }}">{{ day }}</option>
+        {% endfor %}
+    </select>
+    </div>
+    <br>
+    <h1>Time</h1>
+    <div style="width:200px; margin: 0 auto; text-align: center">
+    <select class="form-select" aria-label="Default select example" name="time">
+        <option selected disabled>Choose a time</option>
+        {% for time in times %}
+        <option value="{{ time }}">{{ time }}</option>
+        {% endfor %}
+    </select>
+    </div>
+    <br>
+    <button type="submit">Sign up</button>
+</form>
+{% endblock %}
