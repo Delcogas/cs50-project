@@ -3,7 +3,7 @@
 #### Video Demo:  <https://youtu.be/Qv9i9m31_qI>
 #### Description:
 
-# CS50 Fit Story´s web page is a Toy Story looking web page designed to book Fitness and Dance classes online.
+CS50 Fit Story´s web page is a Toy Story looking web page designed to book Fitness and Dance classes online.
 # At first, you will be prompted to enter your user name and your password. If you do not have a username yet,
 # you should be able to clic the *Register* button located on the upper right side of the web page, in order -
 # to create your user. Either way, you should be able to log in once entered your user and password, and click
